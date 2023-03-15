@@ -1,6 +1,8 @@
+import { memo } from 'react';
 import styles from './styles.module.css';
 
-const Option = ({ image, color, setVisible, name, verifyOption, items, isWinner }) => {
+const Option = ({ image, color, setVisible, name, items, isWinner , verifyOption}) => {
+
     const chooseOptionHandler = () => {
         setVisible(true);
         verifyOption({ color: color, image: image, name: name }, items[Math.floor(Math.random() * 3)]);
@@ -19,4 +21,4 @@ const Option = ({ image, color, setVisible, name, verifyOption, items, isWinner 
     );
 };
 
-export default Option;
+export default memo(Option);

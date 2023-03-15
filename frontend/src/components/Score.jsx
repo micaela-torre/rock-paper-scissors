@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './styles.module.css';
 
 const Score = ({ score }) => {
@@ -8,4 +9,4 @@ const Score = ({ score }) => {
     );
 };
 
-export default Score;
+export default memo(Score);
