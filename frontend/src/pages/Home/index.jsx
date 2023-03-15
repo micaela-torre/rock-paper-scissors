@@ -5,14 +5,14 @@ import { useState } from 'react';
 import Alert from '../../components/Alert';
 import GameOptions from '../../components/GameOptions';
 import ChosenOptions from '../../components/ChosenOptions';
-import { useVerify } from '../../components/useVerify';
+import { useVerify } from '../../hooks/useVerify';
 
 export const Home = () => {
     const [visible, setVisible] = useState(false);
     const [chosenOption, setChosenOption] = useState({});
     const [isWinner, setIsWinner] = useState(false);
     const [houseOption, setHouseOption] = useState({});
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState(JSON.parse(localStorage.getItem('score')) || 0);
 
     const { verifyOption } = useVerify({ setChosenOption, setHouseOption, setIsWinner, score });
 

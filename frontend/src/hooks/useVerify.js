@@ -1,4 +1,5 @@
-import { GAMES_RULES } from '../constants';
+import { GAMES_RULES } from "../constants";
+
 
 export const useVerify = ({ setChosenOption, setHouseOption, setIsWinner, score }) => {
     const verifyOption = (chosenOptionUser, chosenOptionHouse) => {

@@ -6,12 +6,12 @@ import Option from './Option';
 const GameOptions = ({  setVisible , verifyOption}) => {
     return (
         <div className={styles.container_options}>
-            {GAME_ITEMS.map(item => (
+            {GAME_ITEMS.map(({id, color, image, name}) => (
                 <Option
-                    key={item.name}
-                    color={item?.color}
-                    image={item?.image}
-                    name={item?.name}
+                    key={`GameOptions_${id}`}
+                    color={color}
+                    image={image}
+                    name={name}
                     setVisible={setVisible}
                     items={GAME_ITEMS}
                     verifyOption={verifyOption}
