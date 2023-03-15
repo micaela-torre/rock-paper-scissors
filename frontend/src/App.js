@@ -1,8 +1,8 @@
+import { Home } from './pages/Home';
+import './app.css';
 
 function App() {
-  return (
-    <div className="App">Inicio</div>
-  );
+    return <Home />;
 }
 
 export default App;

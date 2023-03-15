@@ -1,0 +1,77 @@
+.score_box {
+    width: 23%;
+    text-align: center;
+    height: 6rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.score_box p {
+    color: hsl(229, 64%, 46%);
+}
+.score_box .score {
+    color: hsl(229, 25%, 31%);
+    font-size: 3.5rem;
+    margin-top: -1.5rem;
+}
+
+.container_option {
+    width: 10rem;
+    height: 10rem;
+    background: transparent;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_option:last-child {
+    margin: auto;
+}
+
+.container_image {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is_winner {
+    background: rgb(133, 130, 130);
+    box-shadow: 0 0 0 0 rgb(208, 208, 208);
+    animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container_option {
+        width: 7rem;
+        height: 7rem;
+    }
+    .container_image {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    .rules_image{
+        width: 100%;
+    }
+}
